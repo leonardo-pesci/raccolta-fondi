@@ -26,8 +26,7 @@ body {
 }
 
 #placeHolder {
-    height: 75px;
-    display: none;
+    height: 67px;
 }
 
 /* ^ Nav */
@@ -41,9 +40,10 @@ body {
     z-index: 100;
 }
 
-.nav-item a {
+.nav-item {
     font-size: 18px;
     color: var(--color-2);
+    margin: 4px 10px;
 }
 
 .active {
@@ -122,6 +122,10 @@ body {
     display: none;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .fitContent {
     background-size: cover;
     background-position: center;
@@ -133,7 +137,7 @@ body {
 @media screen and (max-width: 462px){
     #placeHolder {
         width: 100vw;
-        height: 118px;
+        height: 102px;
     }
 
     #home h1 {
