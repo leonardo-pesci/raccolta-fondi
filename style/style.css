@@ -7,17 +7,27 @@
 
 :root {
     --color-nav: #157A6E;
+    --color-title: #c1977c;
     --color-bg: #F6F4D2;
     --color-1: #F19C79;
     --color-2: #C4C6E7;
-    --color-btn: #A44A3F;
+    --color-btn: #cf5d4e;
     --color-black: #000000;
+    --bs-body-font-family: "Roboto Slab", serif;
 }
 
 /* ^ General */
 html {
     background-color: var(--color-bg);
-    height: 4000px;
+}
+
+body {
+    background-color: transparent;
+}
+
+#placeHolder {
+    height: 75px;
+    display: none;
 }
 
 /* ^ Nav */
@@ -25,10 +35,89 @@ html {
     width: 100vw !important;
     max-width: none;
     background-color: var(--color-nav);
-    position: sticky;
+    position: fixed;
+    top: 0;
     margin: 0;
+    z-index: 100;
 }
 
 .nav-item a {
+    font-size: 18px;
     color: var(--color-2);
+}
+
+.active {
+    background-color: transparent !important;
+}
+
+
+
+
+/* ^ Home */
+#home {
+
+}
+
+#homeImg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./../img/homeBg.png);
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+#homeContent {
+
+}
+
+#home h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-title);
+    text-shadow: var(--color-1) 1px 0 1px;
+    text-align: center;
+}
+
+#home p {
+    background-color: var(--color-title);
+    padding: 4px 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#placeHolderHome {
+    margin-bottom: 100vh;
+}
+
+#homeDescription {
+    height: 1000px;
+    background-color: var(--color-2) !important;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+
+/* ^ Utility */
+.hidden {
+    display: none;
+}
+
+.fitContent {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ^ Media */
+@media screen and (max-width: 462px){
+    #placeHolder {
+        width: 100vw;
+        height: 118px;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
 }
