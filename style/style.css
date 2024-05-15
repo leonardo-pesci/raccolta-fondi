@@ -1,0 +1,34 @@
+/* ^ Start */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-nav: #157A6E;
+    --color-bg: #F6F4D2;
+    --color-1: #F19C79;
+    --color-2: #C4C6E7;
+    --color-btn: #A44A3F;
+    --color-black: #000000;
+}
+
+/* ^ General */
+html {
+    background-color: var(--color-bg);
+    height: 4000px;
+}
+
+/* ^ Nav */
+#nav {
+    width: 100vw !important;
+    max-width: none;
+    background-color: var(--color-nav);
+    position: sticky;
+    margin: 0;
+}
+
+.nav-item a {
+    color: var(--color-2);
+}
