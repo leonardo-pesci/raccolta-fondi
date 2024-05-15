@@ -6,11 +6,11 @@
 }
 
 :root {
-    --color-nav: #157A6E;
+    --color-nav: #567d61;;
     --color-title: #c1977c;
     --color-bg: #F6F4D2;
     --color-1: #F19C79;
-    --color-2: #C4C6E7;
+    --color-2: #e8d4bd;
     --color-btn: #cf5d4e;
     --color-black: #000000;
     --bs-body-font-family: "Roboto Slab", serif;
@@ -79,24 +79,43 @@ body {
     text-align: center;
 }
 
-#home p {
-    background-color: var(--color-title);
-    padding: 4px 10px;
-    border-radius: 10px;
-    margin: 20px;
-}
-
 #placeHolderHome {
     margin-bottom: 100vh;
 }
 
-#homeDescription {
-    height: 1000px;
+#homeBox {
     background-color: var(--color-2) !important;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     border-radius: 20px;
     margin: 0 20px;
 }
+
+.homeBoxItem {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.homeBoxItemText {
+    min-width: 70%;
+    background-color: var(--color-title);
+    flex-grow: 1;
+    padding: 4px 8px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.homeBoxItem img {
+    width: auto;
+    height: 100px;
+}
+
+#homeHistory {
+    flex-direction: row-reverse;
+}
+
 
 /* ^ Utility */
 .hidden {
