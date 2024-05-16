@@ -6,7 +6,7 @@ document.querySelector('#donaBtn');
 const navBtns = document.querySelectorAll('.navBtn');
 const mainSections = document.querySelectorAll('.mainSection')
 
-const counters = document.querySelectorAll('.counter-number')
+const counters = document.querySelectorAll('.counter')
 
 let lastSection = 'home'
 const lastSectionStorage = localStorage.getItem('lastSection')
@@ -45,9 +45,10 @@ let callback = (entries, observer) => {
 	
 	if (objData.isIntersecting) {
 		// L'oggetto è entrato nella viewport
-        elements.forEach( (element) => { //!
+        counters.forEach( (element) => { //!
             startCounters(element);
         })
+
 		// Smettiamo di osservare l'oggetto (animazione solo la prima volta che viene visualizzato)
 		observer.unobserve(objData.target);
 	}
@@ -56,10 +57,7 @@ let callback = (entries, observer) => {
 // Creiamo l'Observer vero e proprio
 let observer = new IntersectionObserver(callback, options);
 
-// Seleziona l'elemento che vuoi osservare
-let elements = document.querySelector('.count')
-
-elements.forEach( (element), () => { //!
+counters.forEach( (element) => { //!
     observer.observe(element);
 })
 
@@ -88,9 +86,27 @@ let startCounters = (counter) => {
             clearInterval(timer) 
             value = end
         }
-
         
-        counter.innerHTML = Math.floor(value)
+        let response = ''
+
+        switch (counter.id) {
+            case 'people':
+                response = Math.floor(value)
+                break;
+
+            case 'money':
+                response = '€' + Math.floor(value / 100) + '.' + Math.floor(value % 100)
+                break;
+        
+            case 'percentage':
+                response = Math.floor(value) + '%'
+                break;
+        
+            default:
+                break;
+        }
+
+        counter.innerHTML = response
 
     }, step);
     

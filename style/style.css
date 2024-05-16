@@ -210,6 +210,11 @@ body {
 
 .counter {
     width: 90px;
+    text-align: center;
+}
+
+#money {
+    width: 130px;
 }
 
 .counter-section span.counter {
@@ -280,7 +285,7 @@ body {
     height: 100%;
     display: flex;
     align-content: center;
-    gap: 14px;
+    gap: 32px;
     margin-right: 14px;
 }
 
@@ -290,13 +295,14 @@ body {
 }
 
 .logo img:hover {
-    transform: scale(1.4) rotate(20deg);
+    transform: scale(1.4) rotate(30deg);
     transition-duration: 500ms;
 }
 
 #checkOut {
 
 }
+
 
 
 /* ^ Media */
