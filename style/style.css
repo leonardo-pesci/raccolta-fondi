@@ -17,85 +17,6 @@
 }
 
 
-/* !  */
-#counterBlock {
-    display: flex;
-    flex-direction: row !important;
-    margin: 0;
-}
-
-.counter-section i {
-    display:block;
-    margin:0 0 10px
-}
-
-.counter-section {
-    visibility: visible;
-    animation-duration: 300ms;
-    animation-name: fadeInUp;
-}
-
-.counter-section span.counter {
-    font-size:40px;
-    color:#000;
-    line-height:60px;
-    display:block;
-    font-family: "Oswald",sans-serif;
-    letter-spacing: 2px
-}
-
-.counter-icon {
-    width: 64px;
-    height: 64px;
-}
-
-.counter-title{
-    font-size:12px;
-    letter-spacing:2px;
-    text-transform: uppercase
-}
-
-.counter-icon {
-    top:25px;
-    position:relative
-}
-
-.counter-style2 .counter-title {
-    letter-spacing: 0.55px;
-    float: left;
-}
-
-.counter-style2 span.counter {
-    letter-spacing: 0.55px;
-    float: left;
-    margin-right: 10px;
-}
-
-.counter-style2 i {
-    float: right;
-    line-height: 26px;
-    margin: 0 10px 0 0
-}
-
-.counter-subheadline span {
-    float: right;
-}  
-
-.medium-icon {
-    font-size: 40px !important;
-    margin-bottom: 15px !important;
-} 
-
-.container{
-    margin-top:200px;
-}
-
-
-
-
-
-
-
 
 
 /* ^ Utility */
@@ -115,6 +36,7 @@
 
 /* ^ General */
 html {
+    min-height: 100vh;
     background-color: var(--color-bg);
 }
 
@@ -248,20 +170,91 @@ body {
 
 
 /* ^ Dona */
-#dona {
-    flex-direction: column;
+#donaBlock {
+    position: relative;
+}
+
+/* * Counter */
+#counterBlock {
+    display: flex;
+    flex-direction: row !important;
+    gap: calc(3vw + 10px);
+    visibility: visible;
+    animation-name: fadeIn;
+    margin: 0;
+}
+
+.counter-section i {
+    display:block;
+    margin:0 0 10px
+}
+
+.counter-section {
+    visibility: visible;
+    animation-duration: 300ms;
+    animation-name: fadeInUp;
+}
+
+.counter-section span.counter {
+    font-size: 32px;
+    color:#000;
+    line-height:60px;
+    display:block;
+    letter-spacing: 2px
+}
+
+.counter-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.counter-title{
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform: uppercase
+}
+
+.counter-icon {
+    top:25px;
+    position:relative
+}
+
+.counter-style2 .counter-title {
+    letter-spacing: 0.55px;
+    float: left;
+}
+
+.counter-style2 span.counter {
+    letter-spacing: 0.55px;
+    float: left;
+    margin-right: 10px;
+}
+
+.counter-style2 i {
+    float: right;
+    line-height: 26px;
+    margin: 0 10px 0 0
+}
+
+.counter-subheadline span {
+    float: right;
+}  
+
+.medium-icon {
+    font-size: 40px !important;
+    margin-bottom: 15px !important;
 }
 
 
-#checkOut {
-
-}
 
 /* ^ Footer */
 #footer {
+    position: absolute;
+    left: 0;
+    right: 0;
     background-color: var(--color-nav);
     border-top: 1px solid var(--color-bg) !important;
-    margin: 100px 0 0 !important;
+    margin: auto 0 0 !important;
 }
 
 #footerText {
@@ -276,6 +269,10 @@ body {
 .logo img {
     width: 32px;
     height: 32px;
+}
+
+#checkOut {
+
 }
 
 
