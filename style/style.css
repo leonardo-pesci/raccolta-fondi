@@ -16,9 +16,54 @@
     --bs-body-font-family: "Roboto Slab", serif;
 }
 
+
+/* !  */
+#place {
+    width: 100vw;
+    height: 1000px;
+}
+
+.counter-number {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+.counter-section i { display:block; margin:0 0 10px}
+.counter-section span.counter { font-size:40px; color:#000; line-height:60px; display:block; font-family: "Oswald",sans-serif; letter-spacing: 2px}
+.counter-title{ font-size:12px; letter-spacing:2px; text-transform: uppercase}
+.counter-icon {top:25px; position:relative}
+.counter-style2 .counter-title {letter-spacing: 0.55px; float: left;}
+.counter-style2 span.counter {letter-spacing: 0.55px; float: left; margin-right: 10px;}
+.counter-style2 i {float: right; line-height: 26px; margin: 0 10px 0 0}
+.counter-subheadline span {float: right;}  
+
+.medium-icon {
+    font-size: 40px !important;
+    margin-bottom: 15px !important;
+} 
+
+.container{
+    margin-top:200px;
+}
+
+
+
+
+
+
+
+
+
 /* ^ Utility */
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .pointer {
@@ -158,6 +203,21 @@ body {
 
 #gardenImg {
     background-image: url(./../img/garden.jpg);
+}
+
+
+
+
+
+
+/* ^ Dona */
+#dona {
+    flex-direction: column;
+}
+
+
+#checkOut {
+
 }
 
 /* ^ Footer */
