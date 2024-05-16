@@ -86,7 +86,8 @@ let startCounters = (counter) => {
             clearInterval(timer) 
             value = end
         }
-        counter.innerHTML = Math.floor(value)
+
+        counter.innerHTML = '€' + Math.floor(value)
 
     }, step);
     
