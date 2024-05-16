@@ -16,6 +16,21 @@
     --bs-body-font-family: "Roboto Slab", serif;
 }
 
+/* ^ Utility */
+.hidden {
+    display: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fitContent {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* ^ General */
 html {
     background-color: var(--color-bg);
@@ -87,7 +102,8 @@ body {
     background-color: var(--color-2) !important;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    gap: 30px;
+    padding: 2.5vw;
     border-radius: 20px;
     margin: 0 20px;
 }
@@ -97,60 +113,93 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.homeBoxItem:nth-of-type(2) {
+    flex-direction: row-reverse;
 }
 
 .homeBoxItemContent {
-    width: 60%;
     background-color: var(--color-title);
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4px 8px;
+    gap: 10px;
+    padding: 2%;
     border-radius: 10px;
     margin: 0;
 }
 
 .homeBoxItemTitle {
-    font-size: 4vw;
+    font-size: 2.8vw;
 }
 
 .homeBoxItemText {
-    font-size: 2vw;
+    font-size: 1.4vw;
+    margin-bottom: 0;
 }
 
 .homeBoxItemImg {
-    width: 40%;
-    height: auto;
-    background-color: red;
+    width: 300%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
 }
 
-.homeBoxItemImg img{
-    width: 100%;
+#descriptionImg {
+    background-image: url(./../img/description.jpg);
 }
 
-#homeHistory {
-    flex-direction: row-reverse;
+#historyImg {
+    background-image: url(./../img/history.jpg);
 }
 
-
-/* ^ Utility */
-.hidden {
-    display: none;
+#gardenImg {
+    background-image: url(./../img/garden.jpg);
 }
 
-.pointer {
-    cursor: pointer;
+/* ^ Footer */
+#footer {
+    background-color: var(--color-nav);
+    margin: 100px 0 0 !important;
 }
 
-.fitContent {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.logo img {
+    width: 32px;
+    height: 32px;
 }
 
 
 /* ^ Media */
+@media (max-width: 750px) {
+    #homeBox {
+        gap: 50px;
+    }
+
+    .homeBoxItem {
+        flex-direction: column !important;
+    }
+
+    .homeBoxItemContent {
+        gap: 5px;
+    }
+
+    .homeBoxItemTitle {
+        font-size: 24px;
+    }
+
+    .homeBoxItemText {
+        font-size: 12px;
+    }
+
+    .homeBoxItemImg {
+        width: 100%;
+        height: 250px;
+    }
+}
+
 @media screen and (max-width: 462px){
     #placeHolder {
         width: 100vw;
