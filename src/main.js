@@ -9,7 +9,8 @@ const mainSections = document.querySelectorAll('.mainSection')
 const counters = document.querySelectorAll('.counter')
 
 const modelBtn = document.querySelector('#modelBtn')
-const modal = document.querySelector('.modal')
+const modalBg = document.querySelector('.modalBg')
+const closeBtn = document.querySelector('#closeBtn')
 
 let lastSection = 'home'
 const lastSectionStorage = localStorage.getItem('lastSection')
@@ -130,5 +131,9 @@ navBtns.forEach( (item) => {
 document.querySelector('#' + lastSection + 'Btn').style.color = 'white'
 
 modelBtn.addEventListener('click', () => {
-    modal.classList.remove('hidden')
+    modalBg.classList.remove('hidden')
+})
+
+closeBtn.addEventListener('click', () => {
+    modalBg.classList.add('hidden')
 })

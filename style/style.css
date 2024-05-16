@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 
-.fitContent {
+.fitImg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -277,8 +277,40 @@ body {
     margin-top: 10px;
 }
 
-/* * Model */
+/* * Modal */
+.modalBg {
+    position: fixed;
+    background-color: #f6f4d275;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+}
 
+.modal {
+    width: 80%;
+    height: 80%;
+    position: fixed !important;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+#closeBtn {
+    width: 48px;
+    height: 48px;
+    background-image: url(./../img/icons/close.png);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#submit {
+    background-color: var(--color-nav);
+}
 
 
 
