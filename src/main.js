@@ -8,7 +8,7 @@ const mainSections = document.querySelectorAll('.mainSection')
 
 const counters = document.querySelectorAll('.counter-number')
 
-let lastSection = 'Home'
+let lastSection = 'home'
 const lastSectionStorage = localStorage.getItem('lastSection')
 if (lastSectionStorage) lastSection = JSON.parse(lastSectionStorage)
 
@@ -32,13 +32,11 @@ let showSection = (item) => {
 
 showSection(lastSection)
 
-
-
 // Prepariamo le impostazioni per l'observer
 let options = {
 	root: null,
 	rootMargin: '0px',
-	threshold: 1
+	threshold: 1,
 }
 
 // Prepariamo la funzione che andrà eseguita quando l'elemento entra nella viewport
@@ -47,7 +45,9 @@ let callback = (entries, observer) => {
 	
 	if (objData.isIntersecting) {
 		// L'oggetto è entrato nella viewport
-		startCounters(element);
+        elements.forEach( (element) => { //!
+            startCounters(element);
+        })
 		// Smettiamo di osservare l'oggetto (animazione solo la prima volta che viene visualizzato)
 		observer.unobserve(objData.target);
 	}
@@ -57,9 +57,11 @@ let callback = (entries, observer) => {
 let observer = new IntersectionObserver(callback, options);
 
 // Seleziona l'elemento che vuoi osservare
-let element = document.getElementById('count2')
+let elements = document.querySelector('.count')
 
-observer.observe(element);
+elements.forEach( (element), () => { //!
+    observer.observe(element);
+})
 
 
 
@@ -87,7 +89,8 @@ let startCounters = (counter) => {
             value = end
         }
 
-        counter.innerHTML = '€' + Math.floor(value)
+        
+        counter.innerHTML = Math.floor(value)
 
     }, step);
     
@@ -104,3 +107,5 @@ navBtns.forEach( (item) => {
         showSection(name)
     })
 })
+
+document.querySelector('#' + lastSection + 'Btn').style.color = 'white'

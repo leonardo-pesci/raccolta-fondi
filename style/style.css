@@ -170,8 +170,21 @@ body {
 
 
 /* ^ Dona */
+#dona {
+    height: calc(100vh - 145px - 67px);
+}
+
 #donaBlock {
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+#modelBtn {
+
 }
 
 /* * Counter */
@@ -184,15 +197,19 @@ body {
     margin: 0;
 }
 
+.counter-section {
+    visibility: visible;
+    animation-duration: 300ms;
+    animation-name: fadeInUp;
+}
+
 .counter-section i {
     display:block;
     margin:0 0 10px
 }
 
-.counter-section {
-    visibility: visible;
-    animation-duration: 300ms;
-    animation-name: fadeInUp;
+.counter {
+    width: 90px;
 }
 
 .counter-section span.counter {
@@ -200,7 +217,7 @@ body {
     color:#000;
     line-height:60px;
     display:block;
-    letter-spacing: 2px
+    letter-spacing: 2px;
 }
 
 .counter-icon {
@@ -249,12 +266,10 @@ body {
 
 /* ^ Footer */
 #footer {
-    position: absolute;
-    left: 0;
-    right: 0;
+    height: 65px;
     background-color: var(--color-nav);
     border-top: 1px solid var(--color-bg) !important;
-    margin: auto 0 0 !important;
+    margin: 80px 0 0 !important;
 }
 
 #footerText {
@@ -262,6 +277,9 @@ body {
 }
 
 #logosContainer {
+    height: 100%;
+    display: flex;
+    align-content: center;
     gap: 14px;
     margin-right: 14px;
 }
@@ -269,6 +287,11 @@ body {
 .logo img {
     width: 32px;
     height: 32px;
+}
+
+.logo img:hover {
+    transform: scale(1.4) rotate(20deg);
+    transition-duration: 500ms;
 }
 
 #checkOut {
@@ -304,12 +327,7 @@ body {
     }
 }
 
-@media screen and (max-width: 462px){
-    #placeHolder {
-        width: 100vw;
-        height: 102px;
-    }
-
+@media screen and (max-width: 462px) {
     #home h1 {
         font-size: 2.5rem;
     }
@@ -319,4 +337,10 @@ body {
         height: 24px;
     }
     
+}
+
+@media (max-width: 377) {
+    #donaBlock {
+        height: calc(100vh - 102px - 145px);
+    }
 }
