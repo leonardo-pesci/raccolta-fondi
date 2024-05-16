@@ -75,7 +75,7 @@ body {
     font-size: 4rem;
     font-weight: 600;
     color: var(--color-title);
-    text-shadow: var(--color-1) 1px 0 1px;
+    text-shadow: var(--color-title) 2px 0 2px;
     text-align: center;
 }
 
@@ -96,20 +96,37 @@ body {
     height: fit-content;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-.homeBoxItemText {
-    min-width: 70%;
+.homeBoxItemContent {
+    width: 60%;
     background-color: var(--color-title);
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 4px 8px;
     border-radius: 10px;
     margin: 0;
 }
 
-.homeBoxItem img {
-    width: auto;
-    height: 100px;
+.homeBoxItemTitle {
+    font-size: 4vw;
+}
+
+.homeBoxItemText {
+    font-size: 2vw;
+}
+
+.homeBoxItemImg {
+    width: 40%;
+    height: auto;
+    background-color: red;
+}
+
+.homeBoxItemImg img{
+    width: 100%;
 }
 
 #homeHistory {
