@@ -8,6 +8,9 @@ const mainSections = document.querySelectorAll('.mainSection')
 
 const counters = document.querySelectorAll('.counter')
 
+const modelBtn = document.querySelector('#modelBtn')
+const modal = document.querySelector('.modal')
+
 let lastSection = 'home'
 const lastSectionStorage = localStorage.getItem('lastSection')
 if (lastSectionStorage) lastSection = JSON.parse(lastSectionStorage)
@@ -45,7 +48,7 @@ let callback = (entries, observer) => {
 	
 	if (objData.isIntersecting) {
 		// L'oggetto è entrato nella viewport
-        counters.forEach( (element) => { //!
+        counters.forEach( (element) => {
             startCounters(element);
         })
 
@@ -57,7 +60,7 @@ let callback = (entries, observer) => {
 // Creiamo l'Observer vero e proprio
 let observer = new IntersectionObserver(callback, options);
 
-counters.forEach( (element) => { //!
+counters.forEach( (element) => {
     observer.observe(element);
 })
 
@@ -125,3 +128,7 @@ navBtns.forEach( (item) => {
 })
 
 document.querySelector('#' + lastSection + 'Btn').style.color = 'white'
+
+modelBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden')
+})

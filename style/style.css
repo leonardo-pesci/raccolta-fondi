@@ -237,8 +237,8 @@ body {
 }
 
 .counter-icon {
-    top:25px;
-    position:relative
+    position: relative;
+    top: 15px;
 }
 
 .counter-style2 .counter-title {
@@ -267,6 +267,25 @@ body {
     margin-bottom: 15px !important;
 }
 
+
+#modelBtn {
+    font-size: 20px;
+    color: var(--color-bg);
+    background-color: var(--color-nav);
+    padding: 6px 18px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+/* * Model */
+
+
+
+
+
+#checkOut {
+
+}
 
 
 /* ^ Footer */
@@ -297,10 +316,6 @@ body {
 .logo img:hover {
     transform: scale(1.4) rotate(30deg);
     transition-duration: 500ms;
-}
-
-#checkOut {
-
 }
 
 
