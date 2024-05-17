@@ -175,20 +175,25 @@ body {
 #blogContainer {
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 40px;
 }
 
 .blogItem {
     width: 50%;
+    min-width: 350px;
     background-color: var(--color-blog);
     display: flex;
     flex-direction: row;
+    position: relative;
+    padding: 20px 20px 50px;
     border: 1px solid var(--color-border) !important;
 }
 
 .blogItemContent {
-    position: relative;
-    padding: 20px 20px 50px;
+    
 }
 
 .blogItemCategory {
@@ -196,7 +201,7 @@ body {
 }
 
 .blogItemTitle {
-
+    width: calc(100% - 90px);
 }
 
 .blogItemDate {
@@ -212,6 +217,7 @@ body {
     position: absolute;
     bottom: 10px;
     right: 30px;
+    text-align: right;
 }
 
 .blogItemImg {
@@ -406,7 +412,23 @@ body {
     transition-duration: 500ms;
 }
 
+/* ^ Other */
+#hiCoder {
+    background-color: red;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
 
+#hicoderMessage {
+
+}
 
 /* ^ Media */
 @media (max-width: 900px) {
@@ -430,7 +452,6 @@ body {
 
     .homeBoxItemTitle {
         font-size: 24px;
-        width: 60%;
     }
 
     .homeBoxItemText {
@@ -454,6 +475,10 @@ body {
         height: 24px;
     }
 
+    .blogItem {
+        min-width: 230px;
+    }
+
 }
 
 @media (max-width: 377px) {
@@ -461,4 +486,15 @@ body {
         height: calc(100vh - 102px - 145px);
     }
 
+    #donaBlock {
+        top: 280px;
+    }
+
+}
+
+@media (max-width: 295px) {
+    #hiCoder {
+        background-color: red;
+        display: flex;
+    }
 }
