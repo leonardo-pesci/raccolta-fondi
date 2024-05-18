@@ -81,7 +81,7 @@ body {
 #homeImg {
     width: 100vw;
     height: 100vh;
-    background-image: url(./../img/homeBg.png);
+    background-image: url(./../img/home/homeBg.png);
     position: fixed;
     top: 0;
     z-index: -1;
@@ -121,7 +121,7 @@ body {
     gap: 15px;
 }
 
-.homeBoxItem:nth-of-type(2) {
+.homeBoxItem:nth-of-type(even) {
     flex-direction: row-reverse;
 }
 
@@ -154,18 +154,24 @@ body {
 }
 
 #descriptionImg {
-    background-image: url(./../img/description.jpg);
+    background-image: url(./../img/home/description.jpg);
 }
 
 #historyImg {
-    background-image: url(./../img/history.jpg);
+    background-image: url(./../img/home/history.jpg);
 }
 
 #gardenImg {
-    background-image: url(./../img/garden.jpg);
+    background-image: url(./../img/home/garden.jpg);
 }
 
+#musicImg {
+    background-image: url(./../img/home/music.jpg);
+}
 
+#volunteeringImg {
+    background-image: url(./../img/home/volunteering.jpg);
+}
 
 
 
@@ -414,7 +420,7 @@ body {
 
 /* ^ Other */
 #hiCoder {
-    background-color: red;
+    background-color: var(--color-1);
     display: none;
     justify-content: center;
     align-items: center;
@@ -494,7 +500,6 @@ body {
 
 @media (max-width: 295px) {
     #hiCoder {
-        background-color: red;
         display: flex;
     }
 }
