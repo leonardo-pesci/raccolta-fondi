@@ -1,0 +1,19 @@
+#nav {
+    width: 100vw !important;
+    max-width: none;
+    background-color: var(--color-nav);
+    position: fixed;
+    top: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.nav-item {
+    font-size: 18px;
+    color: var(--color-2);
+    margin: 4px 10px;
+}
+
+.active {
+    background-color: transparent !important;
+}

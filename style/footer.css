@@ -1,0 +1,28 @@
+#footer {
+    height: 65px;
+    background-color: var(--color-nav);
+    border-top: 1px solid var(--color-bg) !important;
+    margin: 80px 0 0 !important;
+}
+
+#footerText {
+    margin-left: 14px;
+}
+
+#logosContainer {
+    height: 100%;
+    display: flex;
+    align-content: center;
+    gap: 32px;
+    margin-right: 14px;
+}
+
+.logo img {
+    width: 32px;
+    height: 32px;
+}
+
+.logo img:hover {
+    transform: scale(1.4) rotate(30deg);
+    transition-duration: 500ms;
+}

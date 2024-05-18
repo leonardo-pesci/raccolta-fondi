@@ -1,0 +1,133 @@
+#dona {
+    height: calc(100vh - 145px - 67px);
+}
+
+#donaBlock {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ^ Counter */
+#counterBlock {
+    display: flex;
+    flex-direction: row !important;
+    gap: calc(3vw + 10px);
+    visibility: visible;
+    animation-name: fadeIn;
+    margin: 0;
+}
+
+.counter-section {
+    visibility: visible;
+    animation-duration: 300ms;
+    animation-name: fadeInUp;
+}
+
+.counter-section i {
+    display:block;
+    margin:0 0 10px
+}
+
+.counter {
+    width: 90px;
+    text-align: center;
+}
+
+#money {
+    width: 130px;
+}
+
+.counter-section span.counter {
+    font-size: 32px;
+    color:#000;
+    line-height:60px;
+    display:block;
+    letter-spacing: 2px;
+}
+
+.counter-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.counter-title{
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform: uppercase
+}
+
+.counter-icon {
+    position: relative;
+    top: 15px;
+}
+
+.counter-style2 .counter-title {
+    letter-spacing: 0.55px;
+    float: left;
+}
+
+.counter-style2 span.counter {
+    letter-spacing: 0.55px;
+    float: left;
+    margin-right: 10px;
+}
+
+.counter-style2 i {
+    float: right;
+    line-height: 26px;
+    margin: 0 10px 0 0
+}
+
+.counter-subheadline span {
+    float: right;
+}  
+
+.medium-icon {
+    font-size: 40px !important;
+    margin-bottom: 15px !important;
+}
+
+/* ^ Modal */
+.modalBg {
+    position: fixed;
+    background-color: #f6f4d275;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+}
+
+.modal {
+    width: 80%;
+    height: 80%;
+    position: fixed !important;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 48px;
+    border-radius: 20px;
+}
+
+#closeBtn {
+    width: 48px;
+    height: 48px;
+    background-image: url(./../img/icons/close.png);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#anonymous {
+    position: relative;
+    top: 4px;
+}
+
+#submit {
+    background-color: var(--color-nav);
+}

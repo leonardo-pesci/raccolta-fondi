@@ -1,0 +1,74 @@
+@media (max-width: 900px) {
+    .blogItem {
+        width: 100%;
+    }
+} 
+
+@media (max-width: 750px) {
+    #homeBox {
+        gap: 50px;
+    }
+
+    .homeBoxItem {
+        flex-direction: column !important;
+    }
+
+    .homeBoxItemContent {
+        gap: 5px;
+    }
+
+    .homeBoxItemTitle {
+        font-size: 24px;
+    }
+
+    .homeBoxItemText {
+        font-size: 14px;
+    }
+
+    .homeBoxItemImg {
+        width: 100%;
+        height: 250px;
+    }
+
+    .aboutItemTitle {
+        font-size: 24px;
+    }
+
+    .aboutItemText {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 462px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .blogItem {
+        min-width: 230px;
+    }
+
+}
+
+@media (max-width: 377px) {
+    #donaBlock {
+        height: calc(100vh - 102px - 145px);
+    }
+
+    #donaBlock {
+        top: 280px;
+    }
+
+}
+
+@media (max-width: 295px) {
+    #hiCoder {
+        display: flex;
+    }
+}

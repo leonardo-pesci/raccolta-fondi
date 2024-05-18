@@ -1,0 +1,90 @@
+#homeImg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./../img/home/homeBg.png);
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+#home h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-title);
+    text-shadow: var(--color-title) 2px 0 2px;
+    text-align: center;
+}
+
+#placeHolderHome {
+    margin-bottom: 100vh;
+}
+
+#homeBox {
+    background-color: var(--color-2) !important;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2.5vw;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+
+.homeBoxItem {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.homeBoxItem:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.homeBoxItemContent {
+    background-color: var(--color-title);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 2%;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.homeBoxItemTitle {
+    font-size: 2.8vw;
+}
+
+.homeBoxItemText {
+    font-size: 1.3vw;
+    margin-bottom: 0;
+}
+
+.homeBoxItemImg {
+    width: 300%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#descriptionImg {
+    background-image: url(./../img/home/description.jpg);
+}
+
+#historyImg {
+    background-image: url(./../img/home/history.jpg);
+}
+
+#gardenImg {
+    background-image: url(./../img/home/garden.jpg);
+}
+
+#musicImg {
+    background-image: url(./../img/home/music.jpg);
+}
+
+#volunteeringImg {
+    background-image: url(./../img/home/volunteering.jpg);
+}
