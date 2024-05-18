@@ -19,7 +19,6 @@
 
 
 
-
 /* ^ Utility */
 .hidden {
     display: none !important;
@@ -74,10 +73,6 @@ body {
 
 
 /* ^ Home */
-#home {
-
-}
-
 #homeImg {
     width: 100vw;
     height: 100vh;
@@ -85,10 +80,6 @@ body {
     position: fixed;
     top: 0;
     z-index: -1;
-}
-
-#homeContent {
-
 }
 
 #home h1 {
@@ -198,24 +189,12 @@ body {
     border: 1px solid var(--color-border) !important;
 }
 
-.blogItemContent {
-    
-}
-
-.blogItemCategory {
-
-}
-
 .blogItemTitle {
     width: calc(100% - 90px);
 }
 
 .blogItemDate {
     margin: 10px 0;
-}
-
-.blogItemText {
-
 }
 
 .blogItemName {
@@ -507,10 +486,6 @@ body {
     bottom: 0;
     right: 0;
     z-index: 1000;
-}
-
-#hicoderMessage {
-
 }
 
 /* ^ Media */
