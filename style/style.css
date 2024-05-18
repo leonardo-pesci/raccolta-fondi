@@ -177,7 +177,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     padding: 40px;
 }
 
@@ -205,7 +205,7 @@ body {
 }
 
 .blogItemDate {
-
+    margin: 10px 0;
 }
 
 .blogItemText {
