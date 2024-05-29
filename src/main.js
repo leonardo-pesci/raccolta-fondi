@@ -1,10 +1,4 @@
 // ^ Elementi
-document.querySelector('#homeBtn');
-document.querySelector('#blogBtn');
-document.querySelector('#chiSiamoBtn');
-document.querySelector('#qAndABtn');
-document.querySelector('#donaBtn');
-
 const navBtns = document.querySelectorAll('.navBtn');
 const mainSections = document.querySelectorAll('.mainSection')
 const counters = document.querySelectorAll('.counter')
